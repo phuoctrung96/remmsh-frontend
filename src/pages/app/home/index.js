@@ -31,6 +31,7 @@ const Home = () => {
           </Col>
           <Col xs={10} md={6} lg={5} xl={4} style={{margin: 0}}>
             <AppHomeCard
+              path='/table-system'
               title={messages['common.table-system']}
               icon={TableSystemIcon}
               color='#2196F3'

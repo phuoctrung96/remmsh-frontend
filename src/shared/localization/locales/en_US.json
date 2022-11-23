@@ -901,5 +901,28 @@
   "notifications.completedVisits": "This customer completed the visits",
   "products.add-product": "Add Product",
   "products.edit-product": "Edit Product",
-  "products.product-name": "Product name"
+  "products.product-name": "Product name",
+  "tableSys.floor": "FLOOR",
+  "tableSys.list": "LIST",
+  "tableSys.timeline": "TIMELINE",
+  "tableSys.reservations": "RESERVATIONS",
+  "tableSys.waitlist": "WAITLIST",
+  "tableSys.guests": "GUESTS",
+  "tableSys.servers": "SERVERS",
+  "tableSys.grid": "GRID",
+  "tableSys.name": "Name",
+  "tableSys.status": "Status",
+  "tableSys.number_of_peopele": "No. of People",
+  "tableSys.comments": "Comments",
+  "tableSys.table_number": "Table Number",
+  "tableSys.reservation_notes": "Reservation Comments",
+  "tableSys.time": "Time",
+  "tableSys.arrived": "Arrived",
+  "tableSys.upcoming": "Upcoming",
+  "tableSys.seated": " Seated"
+
+
+  
+
+  
 }

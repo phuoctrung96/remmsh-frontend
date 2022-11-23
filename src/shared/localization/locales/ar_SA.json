@@ -894,5 +894,22 @@
   "notifications.completedVisits": "هذا العميل اكمل زياراته",
   "products.add-product": "اضافة منتج",
   "products.edit-product": "تعديل منتج",
-  "products.product-name": "اسم المنتج"
+  "products.product-name": "اسم المنتج",
+  "tableSys.floor": "الصالة",
+  "tableSys.list": "القائمة ",
+  "tableSys.timeline": "الجدول الزمني",
+  "tableSys.reservations": "الحجوزات",
+  "tableSys.waitlist": "قائمة الانتظار",
+  "tableSys.guests": "الضيوف",
+  "tableSys.servers": "المضيفون",
+  "tableSys.grid": " المواعيد",
+  "tableSys.status": " الحالة",
+  "tableSys.number_of_peopele": " عدد الافراد",
+  "tableSys.comments": "ملاحظات",
+  "tableSys.table_number": "رقم الطاولة",
+  "tableSys.reservation_notes": "تعليقات الحجز",
+  "tableSys.time": "الوقت",
+  "tableSys.arrived": "وصل",
+  "tableSys.upcoming": "القادم",
+  "tableSys.seated": "تم تجليسه"
 }
