@@ -1,0 +1,61 @@
+.design-container {
+    max-width: 1200px;
+    width: 100%;
+    height: calc(100vh - 100px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.design-body {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+
+.nab-bar {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    gap: 13px;
+    flex: unset;
+}
+
+.nav-btn .MuiBottomNavigationAction-label {
+    flex: unset;
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 141% */
+    color: #FFFFFF;
+}
+
+.nav-btn {
+    flex: unset !important;
+    padding: 10px 16px !important;
+}
+
+.nav-btn.Mui-selected {
+    font-family: 'Futura';
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    transition: all 0.5s;
+    flex: unset;
+}
+
+.nav-btn.Mui-selected .MuiBottomNavigationAction-label {
+    font-family: 'Futura';
+    font-size: 16px;
+    color: rgba(43, 13, 81, 0.75);
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .design-body {
+        flex-direction: column;
+    }
+}

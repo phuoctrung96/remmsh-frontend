@@ -25,7 +25,7 @@ const Topbar = () => {
 
 
   return (
-    <Box display='flex' justifyContent='space-between' p={2} backgroundColor={colors.primary[400]}>
+    <Box display='flex' justifyContent='space-between' p={2} backgroundColor={colors.primary[400]} className = "home-topbar">
       {/* SEARCH BAR */}
       <Box display='flex' sx={{
         paddingLeft: 3,

@@ -53,6 +53,7 @@
     "querystring": "^0.2.1",
     "raw-loader": "^4.0.2",
     "rc-queue-anim": "^1.8.5",
+    "re-position": "^0.7.0",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
     "react-big-calendar": "^0.33.5",
@@ -137,7 +138,7 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.31.11",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2"
