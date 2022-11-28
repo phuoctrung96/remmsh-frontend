@@ -8,12 +8,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IntlMessages from '@crema/utility/IntlMessages';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import {useIntl} from 'react-intl';
-
 
 const List = () => {
   const theme = useTheme();
-  const {messages} = useIntl();
   const colors = tokens(theme.palette.mode);
   const columns = [
     {field: 'id', headerName: ''},
@@ -101,23 +98,28 @@ const List = () => {
       ),
     },
   ];
-  
   return (
     <Box m={'20px'} maxHeight='false' sx={{flexDirection: 'column'}}>
-
-      <Box display={'flex'} sx={{flexDirection: 'row-reverse'}}>{/* SEARCH BAR */}
-        <Box display='flex' backgroundColor={'rgba(105, 91, 131, 0.4)'}sx={{
-          border: '2px solid white' ,
-          borderRadius: 1
-        }}> 
-          <InputBase sx={{ml: 2, flex: 1,p: 1}} placeholder={ messages['common.searchHere']} />
+      <Box display={'flex'} sx={{flexDirection: 'row-reverse'}}>
+        {/* SEARCH BAR */}
+        <Box
+          display='flex'
+          backgroundColor={'rgba(105, 91, 131, 0.4)'}
+          sx={{
+            border: '2px solid white',
+          }}>
+          <InputBase sx={{ml: 2, flex: 1}} placeholder='Search' />
           <IconButton type='button' sx={{p: 1}}>
             <SearchIcon />
           </IconButton>
         </Box>
       </Box>
 
-      <Box sx={{pb: 2, pt: 2}}> {/* ARRIVED TABLE */}
+      <Box
+        sx={{
+          paddingBottom: 2,
+          paddingTop: 2,
+        }}>
         <Accordion
           defaultExpanded
           sx={{
@@ -175,7 +177,10 @@ const List = () => {
         </Accordion>
       </Box>
 
-      <Box sx={{pb: 2, pt: 2}}> {/* UPCOMING TABLE */}
+      <Box
+        sx={{
+          paddingBottom: 2,
+        }}>
         <Accordion
           defaultExpanded
           sx={{
@@ -232,64 +237,66 @@ const List = () => {
         </Accordion>
       </Box>
 
-      <Box sx={{pb: 2, pt: 2}}> {/* SEATED TABLE */}  
-      <Accordion
-        defaultExpanded
+      <Box
         sx={{
-          backgroundColor: '#45276B',
-          borderRadius: '0',
+          paddingBottom: 2,
         }}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} color='white'>
-          <Typography
-            variant='h5'
-            color='white'
-            fontWeight='bold'
-            // sx={{ mb: "5px" }}
-          >
-            <IntlMessages id='tableSys.seated' />
-          </Typography>
-        </AccordionSummary>
-        <Box
-          m='0 0 0 0'
-          height='18vh'
+        <Accordion
+          defaultExpanded
           sx={{
-            '.MuiDataGrid-row': {
-              backgroundColor: 'rgba(105, 91, 131, 0.5);',
-            },
-            '.MuiDataGrid-row:nth-child(odd)': {
-              backgroundColor: 'rgba(186, 182, 193, 0.6)',
-            },
-            '& .MuiDataGrid-root': {
-              // border: "none",
-            },
-            '& .MuiDataGrid-cell': {
-              borderRight: '2px solid #EDEDED',
-              borderBottom: 'none',
-            },
-            '& .name-column--cell': {
-              color: colors.greenAccent[300],
-            },
-            '& .MuiDataGrid-columnHeaders': {
-              backgroundColor: '#695B83',
-              borderBottom: 'none',
-              fontWeight: '100',
-            },
-            '& .MuiDataGrid-virtualScroller': {
-              backgroundColor: colors.primary[400],
-            },
-            '& .MuiDataGrid-footerContainer': {
-              borderTop: 'none',
-              backgroundColor: colors.blueAccent[700],
-            },
-            '& .MuiCheckbox-root': {
-              color: `${colors.greenAccent[200]} !important`,
-            },
+            backgroundColor: '#45276B',
+            borderRadius: '0',
           }}>
-          <DataGrid rows={mockDataArrived} columns={columns} hideFooter />
-        </Box>
-      </Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} color='white'>
+            <Typography
+              variant='h5'
+              color='white'
+              fontWeight='bold'
+              // sx={{ mb: "5px" }}
+            >
+              <IntlMessages id='tableSys.seated' />
+            </Typography>
+          </AccordionSummary>
+          <Box
+            m='0 0 0 0'
+            height='18vh'
+            sx={{
+              '.MuiDataGrid-row': {
+                backgroundColor: 'rgba(105, 91, 131, 0.5);',
+              },
+              '.MuiDataGrid-row:nth-child(odd)': {
+                backgroundColor: 'rgba(186, 182, 193, 0.6)',
+              },
+              '& .MuiDataGrid-root': {
+                // border: "none",
+              },
+              '& .MuiDataGrid-cell': {
+                borderRight: '2px solid #EDEDED',
+                borderBottom: 'none',
+              },
+              '& .name-column--cell': {
+                color: colors.greenAccent[300],
+              },
+              '& .MuiDataGrid-columnHeaders': {
+                backgroundColor: '#695B83',
+                borderBottom: 'none',
+                fontWeight: '100',
+              },
+              '& .MuiDataGrid-virtualScroller': {
+                backgroundColor: colors.primary[400],
+              },
+              '& .MuiDataGrid-footerContainer': {
+                borderTop: 'none',
+                backgroundColor: colors.blueAccent[700],
+              },
+              '& .MuiCheckbox-root': {
+                color: `${colors.greenAccent[200]} !important`,
+              },
+            }}>
+            <DataGrid rows={mockDataArrived} columns={columns} hideFooter />
+          </Box>
+        </Accordion>
       </Box>
-
     </Box>
   );
 };

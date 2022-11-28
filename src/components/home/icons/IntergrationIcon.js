@@ -2,8 +2,8 @@ import React from 'react';
 
 const IntergrationIconSvg = () => (
   <svg
-    width='46,5'
-    height='46,5'
+    width='46'
+    height='46'
     viewBox='0 0 56 56'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'>

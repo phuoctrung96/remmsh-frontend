@@ -919,15 +919,7 @@
   "tableSys.time": "Time",
   "tableSys.arrived": "Arrived",
   "tableSys.upcoming": "Upcoming",
-  "tableSys.seated": " Seated",
-  "tableSys.not_confirmed": "NOT CONFIRMED",
-  "tableSys.shift": "Shift",
-  "tableSys.breakfast&lunch": "Breakfast & Lunch",
-  "tableSys.dinner": "Dinner",
-  "tableSys.reservation": "Reservation"
- 
-  
- 
+  "tableSys.seated": " Seated"
 
 
   

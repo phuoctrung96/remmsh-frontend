@@ -2,12 +2,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     }
-  },
-  "strict": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true
+  }
 }

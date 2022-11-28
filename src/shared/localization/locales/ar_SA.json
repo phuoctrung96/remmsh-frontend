@@ -901,7 +901,6 @@
   "tableSys.reservations": "الحجوزات",
   "tableSys.waitlist": "قائمة الانتظار",
   "tableSys.guests": "الضيوف",
-  "tableSys.name": "الاسم",
   "tableSys.servers": "المضيفون",
   "tableSys.grid": " المواعيد",
   "tableSys.status": " الحالة",
@@ -912,11 +911,5 @@
   "tableSys.time": "الوقت",
   "tableSys.arrived": "وصل",
   "tableSys.upcoming": "القادم",
-  "tableSys.seated": "تم تجليسه",
-  "tableSys.not_confirmed": "غير مؤكد",
-  "tableSys.shift": "الوردية",
-  "tableSys.breakfast&lunch": "فطور و غداء",
-  "tableSys.dinner": "عشاء",
-  "tableSys.reservation": "حجز"
-
+  "tableSys.seated": "تم تجليسه"
 }

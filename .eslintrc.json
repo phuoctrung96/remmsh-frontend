@@ -19,8 +19,6 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/display-name": "off",
-    
-		"no-unused-vars": "off",
     "prettier/prettier": "warn", //A warning will pop up when the prettier setting is not met
     "react/react-in-jsx-scope": "off" // You must use the import React rule to close jsx files
   },
