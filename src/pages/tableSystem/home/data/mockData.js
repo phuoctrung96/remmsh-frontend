@@ -1,5 +1,4 @@
-import { tableType } from 'utils/constants'
-import { tokens } from "../theme"
+import { tokens } from "../theme";
 
 export const mockDataTeam = [
   {
@@ -130,8 +129,8 @@ export const mockDataTeam = [
     phone: "(444)555-6239",
     access: "admin",
   },
-
-]
+  
+];
 
 export const mockDataContacts = [
   {
@@ -255,7 +254,7 @@ export const mockDataContacts = [
     zipCode: "1234",
     registrarId: 92197,
   },
-]
+];
 
 
 export const mockDataArrived = [
@@ -266,8 +265,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A6",
     status: "Confirmed",
-    comments: "Birthday",
-    reservation_notes: "",
+    comments:"Birthday",
+    reservation_notes:"",
   },
   {
     id: 2,
@@ -276,8 +275,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A8",
     status: "Confirmed",
-    comments: "Birthday",
-    reservation_notes: "",
+    comments:"Birthday",
+    reservation_notes:"",
   },
   {
     id: 3,
@@ -286,8 +285,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A4",
     status: "Not Confirmed",
-    comments: "",
-    reservation_notes: "",
+    comments:"",
+    reservation_notes:"",
   },
   {
     id: 4,
@@ -296,8 +295,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A2",
     status: "Not Confirmed",
-    comments: "",
-    reservation_notes: "",
+    comments:"",
+    reservation_notes:"",
   },
   {
     id: 2,
@@ -306,8 +305,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A8",
     status: "Confirmed",
-    comments: "Birthday",
-    reservation_notes: "",
+    comments:"Birthday",
+    reservation_notes:"",
   },
   {
     id: 2,
@@ -316,8 +315,8 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A8",
     status: "Confirmed",
-    comments: "Birthday",
-    reservation_notes: "",
+    comments:"Birthday",
+    reservation_notes:"",
   },
   {
     id: 2,
@@ -326,11 +325,11 @@ export const mockDataArrived = [
     number_of_peopele: "2",
     table_number: "A8",
     status: "Confirmed",
-    comments: "Birthday",
-    reservation_notes: "",
+    comments:"Birthday",
+    reservation_notes:"",
   },
-
-]
+  
+];
 
 export const mockTransactions = [
   {
@@ -381,7 +380,7 @@ export const mockTransactions = [
     date: "2022-04-01",
     cost: "133.45",
   },
-]
+];
 
 export const mockBarData = [
   {
@@ -394,7 +393,7 @@ export const mockBarData = [
     AndroidColor: "hsl(97, 70%, 50%)",
     NextJS: 140,
     NextJSColor: "hsl(340, 70%, 50%)",
-
+    
   },
   {
     city: "MAK",
@@ -462,7 +461,7 @@ export const mockBarData = [
     NextJS: 49,
     NextJSColor: "hsl(274, 70%, 50%)",
   },
-]
+];
 
 export const mockPieData = [
   {
@@ -495,7 +494,7 @@ export const mockPieData = [
     value: 584,
     color: "hsl(344, 70%, 50%)",
   },
-]
+];
 
 export const mockLineData = [
   {
@@ -660,7 +659,7 @@ export const mockLineData = [
       },
     ],
   },
-]
+];
 
 export const mockGeographyData = [
   {
@@ -1347,56 +1346,4 @@ export const mockGeographyData = [
     id: "KOR",
     value: 171135,
   },
-]
-
-export const tableReservationRow1 = [
-  {
-    id: 0,
-    title: 'M01',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.occupied,
-  },
-  {
-    id: 1,
-    title: 'M02',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.occupied,
-  },
-  {
-    id: 2,
-    title: 'M03',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.vacant,
-  },
-  {
-    id: 3,
-    title: 'M04',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.vacant,
-  },
-  {
-    id: 4,
-    title: 'M05',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.occupied,
-  },
-  {
-    id: 5,
-    title: 'M06',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.reserved,
-  },
-  {
-    id: 6,
-    title: 'M07',
-    tableNumber: '6',
-    price: '$28',
-    status: tableType.vacant,
-  },
-]
+];
