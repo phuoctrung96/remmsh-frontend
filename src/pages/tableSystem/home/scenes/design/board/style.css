@@ -1,18 +1,17 @@
 .design-board{
-    max-width: 764px;
-    max-height: 754px;
     width: 100%;
     overflow: auto;
     border-radius: 8px;
-    background: rgba(105, 91, 131);
 }
+
 .design-pane{
-    width: 100%;
-    height: 100%;
+    width: 764px;
+    height: 754px;
     background: rgba(105, 91, 131);
     position: relative;
     z-index: 1;
 }
+
 .design-pane .pane-back{
     width: 100%;
     height: 100%;

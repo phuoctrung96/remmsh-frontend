@@ -1,43 +1,42 @@
-import './style.css';
-import { Box, BottomNavigation, BottomNavigationAction, useTheme, Button } from '@mui/material';
+
+import { Box, useTheme, Button, Tabs, Tab} from '@mui/material';
 import { useState } from 'react';
 import { tokens } from '../../theme';
 import ItemGallery from './gallery';
 import DesignBoard from './board';
+import './style.css';
+
 const Design = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [currentTab, setCurrentTab] = useState(0);
+
     return (
         <Box className='design-container'>
             <Box className='design-body'>
                 <DesignBoard />
                 <ItemGallery></ItemGallery>
             </Box>
-            <Box className="nab-bar" sx={{
+            <Box className="nav-bottom-bar" sx={{
                 marginTop: '43px'
             }}>
-                <BottomNavigation
-                    showLabels
+                <Tabs
                     value={currentTab}
                     onChange={(event, newValue) => {
                         setCurrentTab(newValue);
                     }}
-                    sx={{
-                        color: colors.purple[300],
-                        backgroundColor: '#392652',
-                        borderRadius: '8px',
-                        height: '43px',
-                        marginLeft: 'auto'
-                    }
-                    }
+                    indicatorColor="secondary"
+                    textColor="inherit"
+                    variant="fullWidth"
+                    aria-label="full width tabs example"
+                    className='design-tab'
                 >
-                    <BottomNavigationAction label="Main" icon={<></>} className="nav-btn page-nav"/>
-                    <BottomNavigationAction label="Second Floor" icon={<></>} className="nav-btn page-nav" />
-                    <BottomNavigationAction label="Outside" icon={<></>} className="nav-btn page-nav" />
-                    <BottomNavigationAction label="Balcony" icon={<></>} className="nav-btn page-nav" />
-                    <BottomNavigationAction label="New Room" icon={<></>} className="nav-btn page-nav" />
-                </BottomNavigation>
+                    <Tab label="Main" />
+                    <Tab label="Second Floor" />
+                    <Tab label="Outside" />
+                    <Tab label="Balcony" />
+                    <Tab label="New Room" />
+                </Tabs>
                 <Button variant="contained" sx={{
                     backgroundColor: colors.purple[200],
                     borderRadius: '8px',
@@ -46,7 +45,6 @@ const Design = () => {
                     padding: '10px',
                     minWidth: 'unset'
                 }}>
-
                     <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.46 16.716V0.0839989H11.104V16.716H6.46ZM0.232 10.596V6.204H17.368V10.596H0.232Z" fill="white" />
                     </svg>

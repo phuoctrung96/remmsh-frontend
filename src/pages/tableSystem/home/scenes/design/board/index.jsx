@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useEffect , useRef , useState} from "react";
 import { PositionableContainer } from "re-position";
 import { useKeyPress } from "hooks/useKeyPress";
 import './style.css';
-import { useEffect } from "react";
-import { useRef } from "react";
 
 const DesignBoard = () => {
     const [itemList, setItemList] = useState([]);
@@ -45,18 +43,19 @@ const DesignBoard = () => {
     const handleDragOver = (e) => {
         e.preventDefault();
     }
+    
     const handleDrop = (e) => {
         e.preventDefault();
+
         let imageUrl = e.dataTransfer.getData("text");
         const rect = e.currentTarget.getBoundingClientRect();
         let x = (e.pageX - rect.left) * 100 / rect.width;
         let y = (e.pageY - rect.top) * 100 / rect.height;
-        console.log(x, y);
+
         getMeta(
             imageUrl,
             (width, height) => { addItem(imageUrl, x, y, width, height); }
         );
-
     }
 
     const parsePositionNumber = (parseValue, OffsetValue) => {
@@ -75,15 +74,11 @@ const DesignBoard = () => {
             updatedPosition.top = 20 * 100 / boardRef.current.offsetHeight + "%";
         }
         if (parsePositionNumber(updatedPosition.left,boardRef.current.offsetWidth) > boardRef.current.offsetWidth - parseInt(updatedPosition.width) - 20) {
-            console.log(updatedPosition);
-            console.log(parseFloat(updatedPosition.left) * boardRef.current.offsetWidth / 100);
-            console.log(boardRef.current.offsetWidth - parseInt(updatedPosition.width) - 20);
             updatedPosition.left = (100 - (parseInt(updatedPosition.width) + 20) * 100 / boardRef.current.offsetWidth) + "%";
         }
         if (parsePositionNumber(updatedPosition.top,boardRef.current.offsetHeight) > boardRef.current.offsetHeight - parseInt(updatedPosition.height) - 20) {
             updatedPosition.top = (100 - (parseInt(updatedPosition.height) + 20) * 100 / boardRef.current.offsetHeight) + "%";
         }
-        console.log(updatedPosition.top);
 
         let data = itemList.map((item, index) => {
             if (index == selectedIndex) {
@@ -96,11 +91,13 @@ const DesignBoard = () => {
             else
                 return item;
         });
+
         setItemList([...data]);
     }
 
     const updateSelected = (selectedIndex) => {
         setCurrentItemIndex(selectedIndex + 1);
+
         let data = itemList.map((item, index) => {
             if (index == selectedIndex) {
                 return {
@@ -117,6 +114,7 @@ const DesignBoard = () => {
                 }
             }
         });
+
         setItemList([...data]);
     }
 

@@ -1,7 +1,8 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Tabs, Tab } from '@mui/material';
 import { useState } from 'react';
 import './style.css';
 
+// Gallery Items
 import imgWall_1_1 from "assets/images/walls/wall_1_1.png"
 import imgWall_1_2 from "assets/images/walls/wall_1_2.png"
 import imgWall_1_3 from "assets/images/walls/wall_1_3.png"
@@ -124,12 +125,14 @@ const ItemGallery = () => {
 
     const getCurrentItemGroupByType = (value) => {
         let keyData = Object.keys(itemData);
+
         return RleaseItemGroup(itemData[keyData[value]]);
     };
 
     const RleaseItemGroup = (data) => {
         let keyData = Object.keys(data);
         let resultData = [];
+
         for (let i = 0; i < keyData.length; i++) {
             resultData.push(
                 <div key={i}>
@@ -146,6 +149,7 @@ const ItemGallery = () => {
                 </div>
             );
         }
+
         return resultData;
     }
 
@@ -153,15 +157,26 @@ const ItemGallery = () => {
         event.dataTransfer.setData("text", value);
     }
 
+    const handleTabChange = (event, newValue) => {
+        setCurrentItemType(newValue);
+    };
+
     return (
         <div className="item-gallery-container">
             <Box sx={{ width: '100%' }}>
-                <ul className="gallery-nav"
+                <Tabs
+                    value={currentType}
+                    onChange={handleTabChange}
+                    indicatorColor="secondary"
+                    textColor="inherit"
+                    variant="fullWidth"
+                    aria-label="full width tabs example"
+                    className='design-tab gallery-tab'
                 >
-                    <a className={currentType == 0 ? "gallery-nav-a active" : "gallery-nav-a"} onClick={() => setCurrentItemType(0)}>Walls</a>
-                    <a className={currentType == 1 ? "gallery-nav-a active" : "gallery-nav-a"} onClick={() => setCurrentItemType(1)}>Tables & Chairs</a>
-                    <a className={currentType == 2 ? "gallery-nav-a active" : "gallery-nav-a"} onClick={() => setCurrentItemType(2)}>More</a>
-                </ul>
+                    <Tab label="Walls" />
+                    <Tab label="Tables & Chairs" />
+                    <Tab label="More" />
+                </Tabs>
             </Box>
             <div className='gallery-panel'>
                 <div className='panel-title'>
