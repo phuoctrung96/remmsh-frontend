@@ -8,9 +8,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IntlMessages from '@crema/utility/IntlMessages';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import {useIntl} from 'react-intl';
+
 
 const List = () => {
   const theme = useTheme();
+  const {messages} = useIntl();
   const colors = tokens(theme.palette.mode);
   const columns = [
     {field: 'id', headerName: ''},
@@ -98,25 +101,23 @@ const List = () => {
       ),
     },
   ];
+  
   return (
     <Box m={'20px'} maxHeight='false' sx={{flexDirection: 'column'}}>
 
       <Box display={'flex'} sx={{flexDirection: 'row-reverse'}}>{/* SEARCH BAR */}
         <Box display='flex' backgroundColor={'rgba(105, 91, 131, 0.4)'}sx={{
           border: '2px solid white' ,
+          borderRadius: 1
         }}> 
-          <InputBase sx={{ml: 2, flex: 1}} placeholder='Search' />
+          <InputBase sx={{ml: 2, flex: 1,p: 1}} placeholder={ messages['common.searchHere']} />
           <IconButton type='button' sx={{p: 1}}>
             <SearchIcon />
           </IconButton>
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          paddingBottom: 2,
-          paddingTop: 2,
-        }}>
+      <Box sx={{pb: 2, pt: 2}}> {/* ARRIVED TABLE */}
         <Accordion
           defaultExpanded
           sx={{
@@ -174,10 +175,7 @@ const List = () => {
         </Accordion>
       </Box>
 
-      <Box
-        sx={{
-          paddingBottom: 2,
-        }}>
+      <Box sx={{pb: 2, pt: 2}}> {/* UPCOMING TABLE */}
         <Accordion
           defaultExpanded
           sx={{
@@ -234,10 +232,7 @@ const List = () => {
         </Accordion>
       </Box>
 
-      <Box
-        sx={{
-          paddingBottom: 2,
-        }}>     
+      <Box sx={{pb: 2, pt: 2}}> {/* SEATED TABLE */}  
       <Accordion
         defaultExpanded
         sx={{
