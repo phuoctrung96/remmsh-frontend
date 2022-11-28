@@ -4,14 +4,18 @@
     height: calc(100vh - 100px);
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
 }
 
-.design-body {
+.design-newroom {
     display: flex;
     justify-content: center;
     gap: 34px;
+}
+
+.design-body {
+    min-height: 770px;
 }
 
 .nav-bottom-bar {

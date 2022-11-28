@@ -1,5 +1,5 @@
 
-import { Box, useTheme, Button, Tabs, Tab} from '@mui/material';
+import { Box, useTheme, Button, Tabs, Tab } from '@mui/material';
 import { useState } from 'react';
 import { tokens } from '../../theme';
 import ItemGallery from './gallery';
@@ -13,10 +13,6 @@ const Design = () => {
 
     return (
         <Box className='design-container'>
-            <Box className='design-body'>
-                <DesignBoard />
-                <ItemGallery></ItemGallery>
-            </Box>
             <Box className="nav-bottom-bar" sx={{
                 marginTop: '43px'
             }}>
@@ -49,6 +45,19 @@ const Design = () => {
                         <path d="M6.46 16.716V0.0839989H11.104V16.716H6.46ZM0.232 10.596V6.204H17.368V10.596H0.232Z" fill="white" />
                     </svg>
                 </Button>
+            </Box>
+
+            <Box className='design-body'>
+                {currentTab == 0 && <></>}
+                {currentTab == 1 && <></>}
+                {currentTab == 2 && <></>}
+                {currentTab == 3 && <></>}
+                {currentTab == 4 &&
+                    <Box className="design-newroom">
+                        <DesignBoard />
+                        <ItemGallery></ItemGallery>
+                    </Box>
+                }
             </Box>
         </Box >
     );
