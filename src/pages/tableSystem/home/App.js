@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {CssBaseline, ThemeProvider, Tabs, Tab, Box} from '@mui/material';
 import Topbar from './scenes/global/Topbar';
 import {useSelector} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 import {Spin} from 'antd';
 import './App.css';
 
@@ -21,6 +22,54 @@ function App() {
   const [theme, colorMode] = useMode();
   const [currentTab, setCurrentTab] = useState(0);
   const {isLoading} = useSelector((state) => state.userInfo);
+  // const location = useLocation();
+  const navigate = useNavigate();
+  // Somewhere in your code, e.g. inside a handler:
+  const handleTabClick = (e, val) => {
+    setCurrentTab(val);
+    switch (val) {
+      case 0:
+        return navigate('/table-system');
+      case 1:
+        return navigate('/table-system/list');
+      case 2:
+        return navigate('/table-system/grid');
+      case 3:
+        return navigate('/table-system/timeline');
+      case 4:
+        return navigate('/table-system/reservations');
+      case 5:
+        return navigate('/table-system/waitlist');
+      case 6:
+        return navigate('/table-system/guests');
+      case 7:
+        return navigate('/table-system/servers');
+      default:
+        return navigate('/table-system');
+    }
+  };
+  // const handleActiveTab = () => {
+  //   switch (location.pathname) {
+  //     case '/table-system':
+  //       return '0';
+  //     case '/table-system/list':
+  //       return '1';
+  //     case '/table-system/grid':
+  //       return '2';
+  //     case '/table-system/timeline':
+  //       return '3';
+  //     case '/table-system/reservations':
+  //       return '4';
+  //     case '/table-system/waitlist':
+  //       return '5';
+  //     case '/table-system/guests':
+  //       return '6';
+  //     case '/table-system/servers':
+  //       return '7';
+  //     // default:
+  //     //   return '1';
+  //   }
+  // };
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -37,9 +86,7 @@ function App() {
                     </div>
                     <Tabs
                       value={currentTab}
-                      onChange={(e, value) => {
-                        setCurrentTab(value);
-                      }}
+                      onChange={handleTabClick}
                       indicatorColor='secondary'
                       textColor='inherit'
                       variant='fullWidth'
@@ -57,7 +104,7 @@ function App() {
                     </Tabs>
                     <div className='home-btn-live'>LIVE</div>
                     <div className='home-logo'>
-                      <img src={imgUnion} alt="union" />
+                      <img src={imgUnion} alt='union' />
                     </div>
                   </div>
                   <Box className='home-body' style={{marginLeft: '240px'}}>
