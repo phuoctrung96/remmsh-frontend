@@ -15,7 +15,7 @@ import Waitlist from './scenes/waitlist';
 import Guests from './scenes/guests';
 import Servers from './scenes/servers';
 
-import imgUnion from 'assets/images/union.png'
+import imgUnion from 'assets/images/union.png';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -57,10 +57,9 @@ function App() {
                     </Tabs>
                     <div className='home-btn-live'>LIVE</div>
                     <div className='home-logo'>
-                      <img src={imgUnion} alt="union"/>
+                      <img src={imgUnion} alt="union" />
                     </div>
                   </div>
-
                   <Box className='home-body' style={{marginLeft: '240px'}}>
                     <div className='home-closebtn'>
                       <svg
