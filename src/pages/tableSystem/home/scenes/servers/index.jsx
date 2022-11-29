@@ -1,5 +1,5 @@
 const Servers = () => {
-    return <div>Servers</div>;
-}
- 
+  return <div>Servers</div>;
+};
+
 export default Servers;

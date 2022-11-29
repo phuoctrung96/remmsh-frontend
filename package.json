@@ -53,6 +53,7 @@
     "querystring": "^0.2.1",
     "raw-loader": "^4.0.2",
     "rc-queue-anim": "^1.8.5",
+    "re-position": "^0.7.0",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
     "react-big-calendar": "^0.33.5",
