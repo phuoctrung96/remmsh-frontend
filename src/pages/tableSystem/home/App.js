@@ -1,13 +1,11 @@
-import {ColorModeContext, useMode} from './theme';
 import {useState} from 'react';
 import {CssBaseline, ThemeProvider, Tabs, Tab, Box} from '@mui/material';
+import {ColorModeContext, useMode} from './theme';
 import Topbar from './scenes/global/Topbar';
 import {useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import {Spin} from 'antd';
-import './App.css';
 
-import Design from './scenes/design';
 import List from './scenes/list';
 import Grid from './scenes/grid';
 import Timeline from './scenes/timeline';
@@ -15,16 +13,17 @@ import Reservations from './scenes/reservations';
 import Waitlist from './scenes/waitlist';
 import Guests from './scenes/guests';
 import Servers from './scenes/servers';
-
+import Design from './scenes/design';
 import imgUnion from 'assets/images/union.png';
+import './App.css';
 
 function App() {
   const [theme, colorMode] = useMode();
-  const [currentTab, setCurrentTab] = useState(0);
-  const {isLoading} = useSelector((state) => state.userInfo);
-  // const location = useLocation();
   const navigate = useNavigate();
-  // Somewhere in your code, e.g. inside a handler:
+  const [currentTab, setCurrentTab] = useState(0);
+
+  const {isLoading} = useSelector((state) => state.userInfo); //TODO: get table-systems state
+
   const handleTabClick = (e, val) => {
     setCurrentTab(val);
     switch (val) {
@@ -48,32 +47,12 @@ function App() {
         return navigate('/table-system');
     }
   };
-  // const handleActiveTab = () => {
-  //   switch (location.pathname) {
-  //     case '/table-system':
-  //       return '0';
-  //     case '/table-system/list':
-  //       return '1';
-  //     case '/table-system/grid':
-  //       return '2';
-  //     case '/table-system/timeline':
-  //       return '3';
-  //     case '/table-system/reservations':
-  //       return '4';
-  //     case '/table-system/waitlist':
-  //       return '5';
-  //     case '/table-system/guests':
-  //       return '6';
-  //     case '/table-system/servers':
-  //       return '7';
-  //     // default:
-  //     //   return '1';
-  //   }
-  // };
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+
         <div className='app'>
           <main className='content'>
             <Topbar />
@@ -107,6 +86,7 @@ function App() {
                       <img src={imgUnion} alt='union' />
                     </div>
                   </div>
+
                   <Box className='home-body' style={{marginLeft: '240px'}}>
                     <div className='home-closebtn'>
                       <svg

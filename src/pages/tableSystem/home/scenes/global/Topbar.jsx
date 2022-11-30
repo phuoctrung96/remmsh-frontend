@@ -23,7 +23,6 @@ const Topbar = () => {
       p={2}
       backgroundColor={colors.primary[400]}
       className='home-topbar'>
-      {/* SEARCH BAR */}
       <Box
         display='flex'
         sx={{
@@ -47,7 +46,6 @@ const Topbar = () => {
         />
       </Box>
 
-      {/* ICONS */}
       <Box display='flex'>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === 'dark' ? (
@@ -56,15 +54,6 @@ const Topbar = () => {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        {/* <IconButton>
-          <NotificationsOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <SettingsOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <PersonOutlinedIcon />
-        </IconButton> */}
       </Box>
     </Box>
   );
