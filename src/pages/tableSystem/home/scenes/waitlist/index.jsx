@@ -1,5 +1,5 @@
 const Waitlist = () => {
-    return <div>Waitlist</div>;
-}
- 
+  return <div>Waitlist</div>;
+};
+
 export default Waitlist;
